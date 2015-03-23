@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configure xmlns:browser="http://namespaces.zope.org/browser">
+
+    <browser:resourceDirectory
+	     name="virt"
+	     directory="resources"
+	     />        
+
+    <browser:viewlet
+             name="js-virtguest"
+             paths="/++resource++virt/js/virtguest.js"
+             weight="10"
+             manager="Products.ZenUI3.browser.interfaces.IHeadExtraManager"
+             class="Products.ZenUI3.browser.javascript.JavaScriptSrcBundleViewlet"
+             permission="zope2.Public"
+             />
+	
+    <browser:resourceDirectory
+	     name="virt2"
+	     directory="resources"
+	     />        
+    
+    <browser:viewlet
+             name="js-virtdatastore"
+             paths="/++resource++virt2/js/datastore.js"
+             weight="10"
+             manager="Products.ZenUI3.browser.interfaces.IHeadExtraManager"
+             class="Products.ZenUI3.browser.javascript.JavaScriptSrcBundleViewlet"
+             permission="zope2.Public"
+             />
+</configure>
